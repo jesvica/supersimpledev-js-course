@@ -36,8 +36,11 @@
 
         function updateCartQuantity(value) {
             if ((cartQuantity + value) > 10) {
-                alert('Cart quantity cannot be more than 10')
-            } else if ((cartQuantity + value) < 0) {
+                alert('Cart quantity cannot be more than 10. The cart is full');
+                return;
+            }
+            
+            if ((cartQuantity + value) < 0) {
                 alert('Cart quantity cannot be less than 0')
             } else {
                 cartQuantity += value;
